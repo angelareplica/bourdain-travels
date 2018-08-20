@@ -31,12 +31,12 @@ def place(index):
 	place = Bourdain.query.filter_by(index=index).first() # this is like saying SELECT * FROM schools LIMIT one
 	return render_template("show.html", place=place)
 
-@app.route("/search")
-def search():
-	name = request.args.get('query')
-	places = Bourdain.query.filter(Bourdain.City.contains(name)).all()
-	places2 = Bourdain.query.filter(Bourdain.Country.contains(name)).all()
-	return render_template("list.html", places = places, places2 = places2)
+# @app.route("/search")
+# def search():
+# 	name = request.args.get('query')
+# 	places = Bourdain.query.filter(Bourdain.City.contains(name)).all()
+# 	places2 = Bourdain.query.filter(Bourdain.Country.contains(name)).all()
+# 	return render_template("list.html", places = places, places2 = places2)
 
 
 # this is saying, if this is run from the command line, do something:

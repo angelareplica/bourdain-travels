@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   <title>Anthony Bourdain's Travels</title>
+ </head>
+ <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4"> <!--mb-4 means margin bottom for; adds space-->
+        <a class="navbar-brand" href="/places">Anthony Bourdain's Travels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul> -->
+          <!-- <form class="form-inline my-2 my-lg-0" action="/search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+            name='query'> -->
+            <!-- the form gets an action; the input gets a name -->
+           <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+  
+
+   <div class="container">
+   
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+</head>
+
+<div class="jumbotron">
+ <h1 class="display-4">War, United States</h1> 
+ <b>Show:</b> Parts Unknown<br>
+ <b>Title:</b> West Virginia<br>
+<b>Air Date:</b> 4/29/2018
+</div>
+
+<div class="row mb-5">
+<div class="col-5">
+<b>Description:</b><br>
+Bourdain digs deep into the proud, often misunderstood culture of West Virginia, as he traverses a 5,000 foot mine, observes the demolition derby-like sport of rock-bouncing and dines on signature Appalachian dishes. Bourdain&#39;s own preconceptions are dashed as he finds the West Virginian attitude to be a remarkable dichotomy, both resolute and open-minded. Over an assortment of local dishes - snapping turtle patties, squirrel gravy, pawpaw ice cream, spaghetti pie, and bear meat - residents candidly discuss their staunch views on the second amendment, Donald Trump, life beyond the coal industry, and the reclamation of West Virginian cuisine.
+ </div>
+
+<div class="col-7">
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+crossorigin=""></script>
+<div id="mapid"></div>
+<style>
+#mapid { height: 400px; }
+</style>
+<script>
+
+  
+var map = L.map('mapid').setView([37.301225, -81.690943], 13);
+
+L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
+ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+ subdomains: 'abcd',
+ minZoom: 1,
+ maxZoom: 16,
+ ext: 'png'
+}).addTo(map)
+
+var marker = L.marker([37.301225, -81.690943]).addTo(map);
+marker.bindPopup("War, United States").openPopup();
+</script>
+
+</div>
+</div>
+
+
+ </div>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ </body>
+</html>
