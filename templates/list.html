@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<center><p><h1>Every place Anthony Bourdain has visited on TV</h1></p>
+  <div id="list-example" class="list-group">
+  <ul class="list-group">
+{% for place in places %}
+
+<a class="list-group-item list-group-item-action" href="{{ url_for('place', index=place.index) }}"><b>{{ place.City }}, {{ place.Country}}</b> - <i>{{ place.Show}}</i> - Aired {{ place['Air Date'] }}</a>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}
