@@ -34,9 +34,8 @@ def place(index):
 # @app.route("/search")
 # def search():
 # 	name = request.args.get('query')
-# 	places = Bourdain.query.filter(Bourdain.City.contains(name)).all()
-# 	places2 = Bourdain.query.filter(Bourdain.Country.contains(name)).all()
-# 	return render_template("list.html", places = places, places2 = places2)
+# 	places = Bourdain.query.filter(Bourdain.City.contains(name)).all() 
+# 	return render_template("list.html", places = places)
 
 
 # this is saying, if this is run from the command line, do something:
